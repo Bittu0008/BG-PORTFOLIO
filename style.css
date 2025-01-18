@@ -1,0 +1,408 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: futura;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+*::selection {
+    background-color: #921026;
+}
+
+p, h1, h2, span:hover .cursor {
+    mix-blend-mode: difference;
+}
+
+p, h1, h2, span:hover {
+    cursor: default;
+}
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: #921026;
+    position: absolute;
+    z-index: 9999;
+    opacity: 0;
+}
+
+.pg-1 {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pg-1 .left {
+    height: 100%;
+    width: 49%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+    padding-left: 8vw;
+    color: #fff;
+    z-index: 999;
+}
+
+.pg-1 .left h2 {
+    font-size: 4vw;
+    font-weight: 700;
+    letter-spacing: -4px;
+}
+
+.pg-1 .left h1 {
+    font-size: 6vw;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #921026;
+}
+
+.pg-1 .left h1::selection {
+    color: white;
+}
+
+.pg-1 .left p {
+    padding: 2vw 0;
+    font-size: 1.2vw;
+    line-height: 1.2;
+}
+
+.pg-1 .left .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.pg-1 .left .icons a {
+    text-decoration: none;
+    color: black;
+    /* font-size: 1.5vw; */
+    padding: 1.2vw;
+    background: #fff;
+    color: black;
+    border-radius: 50%;
+    transition: .33s;
+    position: relative;
+    z-index: 9999999;
+}
+
+.pg-1 .left .icons a::after {
+    content: "";
+    padding: 2vw;
+    background-color: #921026;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+.pg-1 .left .icons i {
+    font-size: 1.5vw;
+    /* padding: 1.2vw; */
+    /* background: #fff; */
+    color: black;
+    border-radius: 50%;
+    transition: .33s;
+    position: relative;
+    z-index: 9999999;
+    /* overflow: hidden; */
+}
+
+.pg-1 .left .icons a:hover .cursor {
+    color: white;
+    transform: scale(2);
+}
+
+
+
+.pg-1 .left .icons a:hover::after {
+    transition: .33s;
+    transform: translate(-50%,-50%) scale(1.1);
+}
+
+.pg-1 .right {
+    height: 100%;
+    width: 49%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 8vw;
+    position: relative;
+    z-index: 999;
+}
+
+.pg-1 .right .img {
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pg-1 .right .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pg-1 .circle {
+    height: 270vh;
+    width: 270vh;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: -14.5%;
+    overflow: hidden;
+}
+
+.pg-1 .circle video {
+    object-fit: cover;
+    object-position: top;
+    height: 35%;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    /* right: 25%;
+    top: 10%; */
+}
+
+.pg-1 video {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+}
+
+.pg-2 {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    position: static;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.pg-2 video {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: static;
+}
+
+.pg-2 h1 {
+    font-size: 10vw;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    z-index: 9;
+}
+
+.pg-2 h1:nth-child(1) {
+    margin-left: -15vw;
+    font-weight: 900;
+}
+
+.pg-2 h1:nth-child(1) i {
+    color: #921026;
+}
+
+.pg-2 h1:nth-child(2) {
+    margin-right: -15vw;
+    font-weight: 400;
+}
+
+.pg-2 .light1 {
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    background-color: #921026;
+    filter: blur(100px);
+    position: absolute;
+    top: 70%;
+    left: -10%;
+    z-index: 5;
+}
+
+.pg-2 .light2 {
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    background-color: #921026;
+    filter: blur(100px);
+    position: absolute;
+    top: 40%;
+    right: -10%;
+    z-index: 5;
+}
+
+.pg-2 .light3 {
+    height: 50vh;
+    width: 50vh;
+    border-radius: 50%;
+    background-color: #921026;
+    filter: blur(200px);
+    position: absolute;
+    top: 60%;
+    right: 35%;
+    z-index: 5;
+}
+
+.pg-3 {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    position: static;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.pg-3 video {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.pg-3 h1 {
+    font-size: 10vw;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    z-index: 9;
+}
+
+.pg-3 h1:nth-child(1) {
+    margin-left: -15vw;
+    font-weight: 900;
+}
+
+.pg-3 h1:nth-child(1) i {
+    color: #921026;
+}
+
+.pg-3 h1:nth-child(2) {
+    margin-right: -15vw;
+    font-weight: 400;
+    font-size: 8vw;
+}
+
+.pg-4 {
+    height: 40vh;
+    width: 100vw;
+    background-color: #921026;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8vw;
+}
+
+.pg-4 .left, .pg-4 .center, .pg-4 .right {
+    height: 100%;
+    width: 33vw;
+    margin-top: 5vh;
+    /* background-color: #000; */
+}
+
+.pg-4 .links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    /* gap: .1vw; */
+}
+
+.pg-4 a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 0;
+    /* background-color: green; */
+    overflow-x: hidden;
+}
+
+.pg-4 a::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 50px;
+    position: absolute;
+    bottom: .8vh;
+    left: -100%;
+}
+
+.pg-4 a:hover::before {
+    left: 0;
+    transition: all ease .5s;
+}
+
+.pg-4 .right p {
+    margin-top: 1vh;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 2vh 0;
+    overflow-x: hidden;
+}
+
+.pg-4 .right p::before {
+    content: "";
+    height: 4px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 1vh;
+    left: -100%;
+}
+
+.pg-4 .right p:hover::before {
+    left: 0;
+    transition: all ease .33s;
+}
